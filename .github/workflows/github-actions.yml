@@ -19,7 +19,7 @@ jobs:
         with:
           osAction: BuildSnippets
           snippetZipFile: /tmpsnippets/AWSnippets.zip
-      - name: Check tmp snippet
+      - name: Check tmp snippet..
         run: ls -la ${{ github.workspace }}/tmpsnippets
       - name: Copy to tmp
         run: cp ${{ github.workspace }}/tmpsnippets/AWSnippets.zip /tmp/snippets

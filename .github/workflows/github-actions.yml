@@ -10,8 +10,8 @@ jobs:
           echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_ENV
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Create Desination Dir
-        run: mkdir /tmp/snippets && ${{ github.workspace }}/tmpsnippets
+      - name: Create Destination Dir
+        run: mkdir /tmp/snippets && mkdir ${{ github.workspace }}/tmpsnippets
       - name: Current Directory
         run: ls -la
       - uses: fgrande/Action-OSUtils@master

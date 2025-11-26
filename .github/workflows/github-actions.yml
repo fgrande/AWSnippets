@@ -12,11 +12,19 @@ jobs:
         uses: actions/checkout@v4
       - name: Create Desination Dir
         run: mkdir /tmp/snippets
+      - name: Current Directory
+        run: ls -la
       - uses: fgrande/Action-OSUtils@master
         name: Build Snippets
         with:
           osAction: BuildSnippets
-          snippetZipFile: /tmp/snippets/AWSnippets.zip
+          snippetZipFile: /tmpsnippets/AWSnippets.zip
+      - name: Check tmp snippet
+        run: ls -la ${{ github.workspace }}/tmpsnippets
+      - name: Copy to tmp
+        run: cp ${{ github.workspace }}/tmpsnippets/AWSnippets.zip /tmp/snippets
+      - name: tmp Snippets dir
+        run: ls -la /tmp/snippets
       - name: verify if Zip file exists
         run: |
           if [ ! -f "/tmp/snippets/AWSnippets.zip" ]; then

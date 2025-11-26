@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OneStreamXF version="6.2.0.11708">
+    <brSnippetsRoot>
+        <clear author="Avvale" />
+        <brSnippets>
+            <brSnippet languageType="CSharp" moduleType="General" category="Avvale Helpers" subCategory="Antani" name="A great snippet from Milan">
+                <description>This is the description.</description>
+                <author>Avvale</author>
+                <searchTerms>Pippo, Pluto, Paperino</searchTerms>
+                <content><![CDATA[string s = "abc";
+				AWLog.WriteFatal(si, "MyString", s);]]></content>
+            </brSnippet>
+            <brSnippet languageType="CSharp" moduleType="General" category="Avvale Helpers" subCategory="Antani" name="Another great snippet from Milan">
+                <description>This is the second description.</description>
+                <author>Avvale</author>
+                <searchTerms>Clarabella, Paperina, Minnie</searchTerms>
+                <content><![CDATA[string x = "abc";
+				AWLog.WriteFatal(si, "MyString", x);]]></content>
+            </brSnippet>
+            <brSnippet languageType="VisualBasic" moduleType="General" category="Avvale Helpers" subCategory="Antani" name="Another great snippet from Milan">
+                <description>VB This is the second description.</description>
+                <author>Avvale</author>
+                <searchTerms>Clarabella, Paperina, Minnie</searchTerms>
+                <content><![CDATA[Dim x as String = "abc";
+				AWLog.WriteFatal(si, "MyString", x);]]></content>
+            </brSnippet>
+        </brSnippets>
+    </brSnippetsRoot>
+</OneStreamXF>

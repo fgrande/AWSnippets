@@ -1,6 +1,9 @@
 # AWSnippets
 A package to build OneStream's snippets
 
+## How snippets are organized
+blah - the fixed names
+
 ## Directory Structure
 blah
 

@@ -1,0 +1,34 @@
+name: AWSnippets Actions
+run-name: AWSnippets event ${{ github.event_name }} raised by ${{ github.actor }}
+on: [push]
+jobs:
+  AWSnippets-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set RepoName variable
+        run: |
+          echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_ENV
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Create Desination Dir
+        run: mkdir /tmp/snippets
+      - uses: fgrande/Action-OSUtils@master
+        name: Build Snippets
+        with:
+          osAction: BuildSnippets
+          snippetZipFile: /tmp/snippets/AWSnippets.zip
+      - name: verify if Zip file exists
+        run: |
+          if [ ! -f "/tmp/snippets/AWSnippets.zip" ]; then
+            exit 1 
+          fi
+      - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
+        name: Upload Snippets
+        with:
+          connection_string: ${{ secrets.AZURE_AWSOFTWARE_STORAGE }}
+          container_name: packages
+          source_folder: /tmp/snippets
+          destination_folder: /             
+      - run: echo "My SuperSecret SharePoint Tenant Id is ${{ secrets.SHAREPOINT_TENANT_ID }}"
+      - run: echo "This job's status is ${{ job.status }}."
+          

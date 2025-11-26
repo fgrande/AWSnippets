@@ -1,1 +1,1 @@
-// This is the PreSnippet.vb
+' This snippet is property of Avvale SpA

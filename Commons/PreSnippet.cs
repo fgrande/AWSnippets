@@ -1,1 +1,1 @@
-// This is the PreSnippet.cs
+// This snippet is property of Avvale SpA

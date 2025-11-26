@@ -11,7 +11,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Create Desination Dir
-        run: mkdir /tmp/snippets
+        run: mkdir /tmp/snippets && ${{ github.workspace }}/tmpsnippets
       - name: Current Directory
         run: ls -la
       - uses: fgrande/Action-OSUtils@master

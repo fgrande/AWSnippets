@@ -11,23 +11,15 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Create Destination Dir
-        run: mkdir /tmp/snippets && mkdir ${{ github.workspace }}/tmpsnippets
-      - name: Current Directory
-        run: ls -la
+        run: mkdir ${{ github.workspace }}/tmpsnippets
       - uses: fgrande/Action-OSUtils@master
         name: Build Snippets
         with:
           osAction: BuildSnippets
           snippetZipFile: tmpsnippets/AWSnippets.zip
-      - name: Check tmp snippet..
-        run: ls -la ${{ github.workspace }}/tmpsnippets
-      - name: Copy to tmp
-        run: cp ${{ github.workspace }}/tmpsnippets/AWSnippets.zip /tmp/snippets
-      - name: tmp Snippets dir
-        run: ls -la /tmp/snippets
       - name: verify if Zip file exists
         run: |
-          if [ ! -f "/tmp/snippets/AWSnippets.zip" ]; then
+          if [ ! -f "${{ github.workspace }}/tmpsnippets/AWSnippets.zip" ]; then
             exit 1 
           fi
       - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
@@ -35,8 +27,7 @@ jobs:
         with:
           connection_string: ${{ secrets.AZURE_AWSOFTWARE_STORAGE }}
           container_name: packages
-          source_folder: /tmp/snippets
+          source_folder: ${{ github.workspace }}/tmpsnippets
           destination_folder: /             
-      - run: echo "My SuperSecret SharePoint Tenant Id is ${{ secrets.SHAREPOINT_TENANT_ID }}"
       - run: echo "This job's status is ${{ job.status }}."
           

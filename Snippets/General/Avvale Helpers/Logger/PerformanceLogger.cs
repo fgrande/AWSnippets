@@ -4,6 +4,9 @@
 
 using Workspace.AWCommons.Commons.Helpers.Loggers;
 
+// First, setup the Logging system (once)
+AWLog.Setup(si, globals);
+
 string _myWatchName = "MyWatch";
 
 // Start Watch

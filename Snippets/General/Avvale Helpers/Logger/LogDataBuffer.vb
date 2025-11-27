@@ -1,0 +1,17 @@
+/// DataBuffer Logger
+/// Log DataBuffer
+/// Logger, DataBuffer
+
+imports Workspace.AWCommons.Commons.Extensions
+
+' Create a DataBuffer
+Dim db As New DataBuffer()
+
+' Add some data to the DataBuffer
+
+' Log the DataBuffer contents, its an improvement of LogDataBuffer
+Dim errorLevel As XFErrorLevel = XFErrorLevel.Information ' [OPTIONAL] log level: Information, Warning, Error, Fatal. Default is Information
+Dim maxRows As Integer = 1000 ' [OPTIONAL] maximum number of rows to log. (Default is 5000)
+Dim separator As String = "," ' [OPTIONAL] separator for the logged data. (Default is semicolon ";")
+
+db.Log(si, api, "Message", errorLevel, maxRows, separator)

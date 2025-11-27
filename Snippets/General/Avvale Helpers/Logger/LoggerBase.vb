@@ -33,3 +33,12 @@ AWLog.WriteLog(si, XFErrorLevel.Information, "String To Log at Info Level")
 AWLog.WriteLog(si, XFErrorLevel.Warning, "String To Log at Warning Level")
 AWLog.WriteLog(si, XFErrorLevel.Error, "String To Log at Error Level")
 AWLog.WriteLog(si, XFErrorLevel.Fatal, "String To Log at Fatal Level")
+
+
+' You can also log exceptions
+Try
+    ' Some code that may throw an exception
+Catch ex As Exception
+    ' Log the exception
+    AWLog.WriteException(si, "Message describing the context of the exception", ex)
+End Try

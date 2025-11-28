@@ -2,6 +2,7 @@
 /// Execute a query
 /// DBManager, Execute
 
+// Referenced Assembly : WS\Workspace.AWCommons.Commons;
 using Workspace.AWCommons.Commons.Helpers.DBHelpers;
 
 // Initialize the DBManager

@@ -2,6 +2,7 @@
 /// Exists an element, a scalar function, a stored procedure, a table or a view in the database
 /// DBManager, Exists
 
+' Referenced Assembly : WS\Workspace.AWCommons.Commons;
 imports Workspace.AWCommons.Commons.Helpers.DBHelpers
 
 ' Initialize the DBManager

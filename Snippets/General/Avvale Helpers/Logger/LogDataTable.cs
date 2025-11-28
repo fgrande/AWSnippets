@@ -1,7 +1,8 @@
-/// DataTable Logger
 /// Log DataTable
+/// DataTable Logger
 /// Logger, DataTable
 
+// Referenced Assembly : WS\Workspace.AWCommons.Commons;
 using Workspace.AWCommons.Commons.Extensions;
 
 // Create a DataTable

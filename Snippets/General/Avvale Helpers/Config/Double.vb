@@ -2,6 +2,7 @@
 /// Get/Set a Double configuration value
 /// Config, Double
 
+' Referenced Assembly : WS\Workspace.AWCommons.Commons;
 imports Workspace.AWCommons.Commons.Configs
 
 ' Initialize the AWConfig

@@ -2,6 +2,7 @@
 /// Get/Set a boolean configuration value
 /// Config, Boolean, Bool
 
+' Referenced Assembly : WS\Workspace.AWCommons.Commons;
 imports Workspace.AWCommons.Commons.Configs
 
 ' Initialize the AWConfig

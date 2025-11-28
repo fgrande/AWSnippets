@@ -1,8 +1,11 @@
-/// DataBuffer Logger
 /// Log DataBuffer
+/// DataBuffer logger
 /// Logger, DataBuffer
 
+' Referenced Assembly : WS\Workspace.AWCommons.Commons;
 imports Workspace.AWCommons.Commons.Extensions
+
+
 
 ' Create a DataBuffer
 Dim db As New DataBuffer()
@@ -15,3 +18,14 @@ Dim maxRows As Integer = 1000 ' [OPTIONAL] maximum number of rows to log. (Defau
 Dim separator As String = "," ' [OPTIONAL] separator for the logged data. (Default is semicolon ";")
 
 db.Log(si, api, "Message", errorLevel, maxRows, separator)
+
+
+
+' Create a DataBufferCell
+Dim dbc As New DataBufferCell()
+
+' Add some data to the DataBufferCell
+
+' Log the DataBufferCell contents
+Dim errorLevel As XFErrorLevel = XFErrorLevel.Information ' [OPTIONAL] log level: Information, Warning, Error, Fatal. Default is Information
+dbc.Log(si, api, errorLevel)

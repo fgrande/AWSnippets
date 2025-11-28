@@ -2,6 +2,7 @@
 /// Impect selected entities
 /// Entity,Impact
 
+// Referenced Assembly : WS\Workspace.AWCommons.Commons;
 using Workspace.AWCommons.Commons.MetaData;
 using Workspace.AWCommons.Commons.Shared;
 

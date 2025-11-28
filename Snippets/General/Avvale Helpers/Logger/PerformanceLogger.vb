@@ -2,6 +2,7 @@
 /// Track execution Performances
 /// Logger, Performance
 
+' Referenced Assembly : WS\Workspace.AWCommons.Commons;
 imports Workspace.AWCommons.Commons.Helpers.Loggers
 
 ' First, setup the Logging system (once)

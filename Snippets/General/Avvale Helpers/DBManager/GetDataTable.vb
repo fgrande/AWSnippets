@@ -2,6 +2,7 @@
 /// Get a DataTable from a SQLCommand
 /// DBManager, DataTable
 
+' Referenced Assembly : WS\Workspace.AWCommons.Commons;
 using Workspace.AWCommons.Commons.Helpers.DBHelpers
 
 ' Initialize the DBManager

@@ -2,6 +2,7 @@
 /// String extensions methods
 /// Extensions, String
 
+// Referenced Assembly : WS\Workspace.AWCommons.Commons;
 using Workspace.AWCommons.Commons.Extensions; 
 
 // Convert string to boolean

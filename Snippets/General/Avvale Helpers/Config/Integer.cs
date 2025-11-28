@@ -2,6 +2,7 @@
 /// Get/Set an integer configuration value
 /// Config, Int, Integer
 
+// Referenced Assembly : WS\Workspace.AWCommons.Commons;
 using Workspace.AWCommons.Commons.Configs;
 
 // Initialize the AWConfig

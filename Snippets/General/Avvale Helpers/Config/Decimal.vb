@@ -2,6 +2,7 @@
 /// Get/Set a Decimal configuration value
 /// Config, Decimal
 
+' Referenced Assembly : WS\Workspace.AWCommons.Commons;
 imports Workspace.AWCommons.Commons.Configs
 
 ' Initialize the AWConfig

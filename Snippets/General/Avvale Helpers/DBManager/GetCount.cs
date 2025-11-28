@@ -2,6 +2,7 @@
 /// Get the number of records from a SQLCommand
 /// DBManager, Count
 
+// Referenced Assembly : WS\Workspace.AWCommons.Commons;
 using Workspace.AWCommons.Commons.Helpers.DBHelpers;
 
 // Initialize the DBManager

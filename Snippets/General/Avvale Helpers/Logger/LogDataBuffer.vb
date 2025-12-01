@@ -1,6 +1,6 @@
 /// Log DataBuffer
-/// DataBuffer logger
-/// Logger, DataBuffer
+/// DataBuffer and DataBufferCell logger
+/// Logger, DataBuffer, DataBufferCell
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
 imports Workspace.AWCommons.Commons.Extensions

@@ -1,9 +1,9 @@
-/// Boolean configuration value
-/// Get/Set a boolean configuration value
-/// Config, Boolean, Bool
+/// Azure File Uploader (FileSystem)
+/// Upload a File from FileSystem
+/// Azure, Upload
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.Configs
+Imports Workspace.AWCommons.Commons.Configs
 
 ' Initialize the AWConfig
 Dim _cfg As New AWConfig(si, globals)

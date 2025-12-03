@@ -3,7 +3,7 @@
 /// Logger, DataBuffer, DataBufferCell
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.Extensions
+Imports Workspace.AWCommons.Commons.Extensions
 
 
 

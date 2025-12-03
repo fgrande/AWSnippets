@@ -3,7 +3,7 @@
 /// DBManager, DataTable
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-using Workspace.AWCommons.Commons.Helpers.DBHelpers
+Imports Workspace.AWCommons.Commons.Helpers.DBHelpers
 
 ' Initialize the DBManager
 Dim _mgr As New AWDBManager(si, globals)

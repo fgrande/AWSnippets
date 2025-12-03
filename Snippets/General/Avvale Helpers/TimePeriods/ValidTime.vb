@@ -3,7 +3,7 @@
 /// Extensions, TimePeriod, String
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.Extensions;
+Imports Workspace.AWCommons.Commons.Extensions;
 
 ' Determine if string is a time period
 Dim timePeriod As String = "2023M01"

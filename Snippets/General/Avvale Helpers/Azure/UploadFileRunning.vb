@@ -1,10 +1,10 @@
-/// Upload a File to Azure
-/// Upload a File from FileSystem
+/// Azure File Uploader (Running)
+/// Upload a File from an Enumeration cycle
 /// Azure, Upload
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.WebUtils.Azure
-imports Workspace.AWCommons.Commons.Helpers.DBHelpers
+Imports Workspace.AWCommons.Commons.WebUtils.Azure
+Imports Workspace.AWCommons.Commons.Helpers.DBHelpers
 
 ' This is the Config SubArea (under Area "Azure") that identifies the Azure Configuration
 ' for TenantID, ClientID and ClientSecret

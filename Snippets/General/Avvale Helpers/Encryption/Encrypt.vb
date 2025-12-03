@@ -3,7 +3,7 @@
 /// Commons, Encryption, Encrypt, String
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.InternalUtils
+Imports Workspace.AWCommons.Commons.InternalUtils
 
 ' Encrypt a string
 Dim plainText As String = "This is a test"

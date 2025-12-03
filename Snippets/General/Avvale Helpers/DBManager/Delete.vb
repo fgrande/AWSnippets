@@ -3,7 +3,7 @@
 /// DBManager, Delete, Truncate, Drop
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.Helpers.DBHelpers
+Imports Workspace.AWCommons.Commons.Helpers.DBHelpers
 
 ' Initialize the DBManager
 Dim _mgr As New AWDBManager(si, globals)

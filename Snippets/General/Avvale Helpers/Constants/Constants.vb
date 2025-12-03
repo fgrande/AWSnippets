@@ -3,7 +3,7 @@
 /// Commons, Constants
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.Shared
+Imports Workspace.AWCommons.Commons.Shared
 
 ' This is the Everyone group constant
 dim _everyoneGroup as string = AWConstants.EveryoneGroup

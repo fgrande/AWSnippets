@@ -3,7 +3,7 @@
 /// Commons, User-Pref, Get
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.InternalUtils
+Imports Workspace.AWCommons.Commons.InternalUtils
 
 ' Create a UserPrefVariable instance
 Dim _userPref As New AWUserPref(si, globals)

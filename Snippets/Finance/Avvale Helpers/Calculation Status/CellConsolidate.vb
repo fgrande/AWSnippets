@@ -3,7 +3,7 @@
 /// Consolitation, Conso, Cell
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.MetaData
+Imports Workspace.AWCommons.Commons.MetaData
 
 ' Initialize the Base Metadata Library
 Dim _mdlib As New AWMetadataLibraries(si, api, globals)

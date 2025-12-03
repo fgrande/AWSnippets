@@ -3,7 +3,7 @@
 /// Metadata, Children
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.MetaData
+Imports Workspace.AWCommons.Commons.MetaData
 
 
 ' Initialize the Children Metadata Library

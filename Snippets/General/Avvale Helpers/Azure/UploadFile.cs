@@ -1,19 +1,25 @@
-/// Boolean configuration value
-/// Get/Set a boolean configuration value
-/// Config, Boolean, Bool
+/// Azure File Uploader (FileSystem)
+/// Upload a File from FileSystem
+/// Azure, Upload
 
 // Referenced Assembly : WS\Workspace.AWCommons.Commons;
-using Workspace.AWCommons.Commons.Configs;
+using Workspace.AWCommons.Commons.WebUtils.Azure;
 
-// Initialize the AWConfig
-AWConfig _cfg = new AWConfig(si, globals);
+// This is the Config SubArea (under Area "Azure") that identifies the Azure Configuration
+// for TenantID, ClientID and ClientSecret
+string _azureSubArea = "Test";
 
-// Get a boolean configuration value
-bool defaultValue = true; // [OPTIONAL] Default value if the configuration item does not exist
-bool forceRecalculate = false; // [OPTIONAL] Force recalculation of the value from the database. Default is false.
-bool boolValue = _cfg.GetBoolean("Area", "Subarea", "itemName", defaultValue, forceRecalculate);
+// Initialize the AWAzureStorage class
+AWAzureStorage _storage = new AWAzureStorage(si, globals, _azureSubArea);
 
-// Set a boolean configuration value
-bool newValue = false;
-string description = "Description"; // [OPTIONAL] Description of the configuration item
-_cfg.SetBoolean("Area", "Subarea", "itemName", newValue, description);
+string _fileName = "FileNameToLoad.whatever";
+string _storageAccount = "StorageAccount";
+string _destFileName = "FinalFileName.ext";
+int _chunkSize = 65535; // This is the default, can be omitted
+
+bool _result = _storage.UploadFile(_fileName, _storageAccount, _containerName, _destFileName, _chunkSize);
+
+if (!_result)
+{
+    // File wasn't uploaded, check error log
+}

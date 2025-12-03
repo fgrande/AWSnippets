@@ -3,8 +3,8 @@
 /// Entity,Impact
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.MetaData
-imports Workspace.AWCommons.Commons.Shared
+Imports Workspace.AWCommons.Commons.MetaData
+Imports Workspace.AWCommons.Commons.Shared
 
 ' ImpactMode is included in the Shared library and can be one of the following:
 ' - AWImpactMode.None: if you want to impact just the selected entity

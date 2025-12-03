@@ -3,7 +3,7 @@
 /// Logger, DataTable
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.Extensions
+Imports Workspace.AWCommons.Commons.Extensions
 
 ' Create a DataTable
 Dim dt As New DataTable()

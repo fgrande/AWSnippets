@@ -3,7 +3,7 @@
 /// Extensions, DataUnitPk
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons
-imports Workspace.AWCommons.Commons.Extensions
+Imports Workspace.AWCommons.Commons.Extensions
 
 ' Create a DataUnitPk instance
 Dim pk As New DataUnitPk("CubeId", "EntityId", "ParentId", "ConsId", "ScenarioId", "TimeId")

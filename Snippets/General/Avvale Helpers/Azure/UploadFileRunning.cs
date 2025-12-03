@@ -1,5 +1,5 @@
-/// Upload a File to Azure
-/// Upload a File from FileSystem
+/// Azure File Uploader (Running)
+/// Upload a File from an Enumeration cycle
 /// Azure, Upload
 
 // Referenced Assembly : WS\Workspace.AWCommons.Commons;

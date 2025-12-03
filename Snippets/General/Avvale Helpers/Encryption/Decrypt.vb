@@ -3,7 +3,7 @@
 /// Commons, Encryption, Decrypt, String
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.InternalUtils
+Imports Workspace.AWCommons.Commons.InternalUtils
 
 ' Decrypt a string
 Dim encryptedText As String = "GW/D4vlHhDNzqV9He2YYqsyGuJiVQ5l44Fo7qINLzZY="

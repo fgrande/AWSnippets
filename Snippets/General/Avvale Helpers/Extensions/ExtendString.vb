@@ -3,7 +3,7 @@
 /// Extensions, String
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.Extensions
+Imports Workspace.AWCommons.Commons.Extensions
 
 ' Convert string to boolean
 Dim strValue As String = "true"

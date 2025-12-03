@@ -3,7 +3,7 @@
 /// Logger, Log, Performance, Delete, Purge
 
 ' Referenced Assembly : WS\Workspace.AWCommons.Commons;
-imports Workspace.AWCommons.Commons.Helpers.Loggers
+Imports Workspace.AWCommons.Commons.Helpers.Loggers
 
 ' First, setup the Logging system (once)
 AWLog.Setup(si, globals)

@@ -17,11 +17,15 @@ jobs:
         with:
           osAction: BuildSnippets
           snippetZipFile: tmpsnippets/AWSnippets.zip
+          version: VERSION
+          build: BUILD
       - name: verify if Zip file exists
         run: |
           if [ ! -f "${{ github.workspace }}/tmpsnippets/AWSnippets.zip" ]; then
             exit 1 
           fi
+      - name: Copy CHANGELOG to tmpsnippets
+        run: cp CHANGELOG.md tmpsnippets/AWSnippets_CHANGELOG.md
       - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
         name: Upload Snippets
         with:

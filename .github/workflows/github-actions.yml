@@ -25,7 +25,7 @@ jobs:
             exit 1 
           fi
       - name: Copy CHANGELOG to tmpsnippets
-        run: cp CHANGELOG.md tmpsnippets/AWSnippets_CHANGELOG.md
+        run: cp CHANGELOG.md ${{ github.workspace }}/tmpsnippets/AWSnippets_CHANGELOG.md
       - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
         name: Upload Snippets
         with:

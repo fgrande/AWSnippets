@@ -1,6 +1,10 @@
 # AWSnippets
 A package to build OneStream's snippets
 
+Download it from https://awsoftware.blob.core.windows.net/packages/AWSnippets.zip
+
+ChangeLog is here: https://awsoftware.blob.core.windows.net/packages/AWSnippets_CHANGELOG.md
+
 ## How snippets are organized
 blah - the fixed names
 

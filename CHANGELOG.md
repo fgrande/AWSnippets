@@ -2,9 +2,18 @@
 # Change Log
 All notable changes to AWSnippets project will be documented in this file.
  
-
+## [1.0.1] - 2025-12-04
+  
+No relevant changes, just a test for versioning number
  
-## [1.0.0] - 2025-12-04
+### Added
+ 
+### Changed
+   
+### Fixed
+ 
+ 
+## [1.0.0] - 2025-12-01
   
 First release
  

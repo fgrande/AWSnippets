@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # Just for test
-echo "Commit-Msg Hook !!"
+echo "Commit-Msg Hook !! - Message is : " $1
 
 exit 0

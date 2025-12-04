@@ -2,3 +2,5 @@
 
 # Just for test
 echo "Well done !!!"
+
+exit 0

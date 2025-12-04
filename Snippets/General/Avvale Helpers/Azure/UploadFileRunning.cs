@@ -17,6 +17,9 @@ DataTable _dt = _mgr.GetDataTable("SELECT * FROM MyTable");
 // Initialize the AWAzureStorage class
 AWAzureStorage _storage = new AWAzureStorage(si, globals, _azureSubArea);
 
+// As an alternative, we can improve security loading sensitive parameters from Cloud Secrets prepending $: before key names
+//AWAzureStorage _storage = new AWAzureStorage(si, globals, "$:SecretTenantIdKey", "$:SecretClientIdKey", "$:SecretClientSecretKey");
+
 string _storageAccount = "StorageAccount";
 string _destFileName = "FinalFileName.ext";
 int _chunkSize = 65535; // This is the default, can be omitted

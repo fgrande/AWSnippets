@@ -3,6 +3,12 @@
 # Just for test
 buildNo=$(git rev-list --count main)
 message=$(cat $1)
-echo "Commit-Msg Hook on build $buildNo - Message is : $message"
+version=$(cat VERSION)
+
+echo buildNo > BUILD
+echo "$version.$buildNo - $message" >> CHANGELOG
+
+git add BUILD
+git add CHANGELOG
 
 exit 0

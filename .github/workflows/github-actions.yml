@@ -12,10 +12,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Create Destination Dir
         run: mkdir ${{ github.workspace }}/tmpsnippets
-      - name: Get Build number
-        run: |
-          buildNo=$(git rev-list --count main)
-          echo "Build Number is $buildNo"
       - uses: fgrande/Action-OSUtils@master
         name: Build Snippets
         with:

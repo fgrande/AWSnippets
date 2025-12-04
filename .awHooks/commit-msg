@@ -2,6 +2,7 @@
 
 # Just for test
 buildNo=$(git rev-list --count main)
-echo "Commit-Msg Hook on build $buildNo - Message is : " $1
+message=$(cat $1)
+echo "Commit-Msg Hook on build $buildNo - Message is : $message"
 
 exit 0

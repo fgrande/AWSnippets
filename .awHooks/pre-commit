@@ -1,6 +1,9 @@
 #!/bin/sh
 
 # Just for test
-echo "Pre-Commit Hook !!"
+buildNo=$(git rev-list --count main)
+echo $buildNo > BUILD
+
+git add BUILD
 
 exit 0

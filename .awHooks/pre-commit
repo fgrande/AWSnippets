@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # Just for test
-echo "Pre-Commit Hook !!!"
+echo "Pre-Commit Hook !!"
 
 exit 0

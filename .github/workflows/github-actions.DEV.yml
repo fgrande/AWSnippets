@@ -1,6 +1,9 @@
 name: AWSnippets Actions
-run-name: AWSnippets event ${{ github.event_name }} raised by ${{ github.actor }}
-on: [push]
+run-name: AWSnippets DEV event ${{ github.event_name }} raised by ${{ github.actor }} on ${{ github.ref_name }}
+on: 
+  push:
+    branches: 
+      - main
 jobs:
   AWSnippets-Actions:
     runs-on: ubuntu-latest
@@ -48,4 +51,3 @@ jobs:
           source_folder: ${{ github.workspace }}/tmpsnippets
           destination_folder: awsnippets_versions
       - run: echo "This job's status is ${{ job.status }}."
-          

@@ -1,4 +1,4 @@
-name: AWSnippets Actions
+name: AWSnippets Actions PROD
 run-name: AWSnippets PRODUCTION event ${{ github.event_name }} raised by ${{ github.actor }} on ${{ github.ref_name }}
 on: 
   push:

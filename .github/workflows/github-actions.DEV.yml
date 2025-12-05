@@ -1,4 +1,4 @@
-name: AWSnippets Actions
+name: AWSnippets Actions DEV
 run-name: AWSnippets DEV event ${{ github.event_name }} raised by ${{ github.actor }} on ${{ github.ref_name }}
 on: 
   push:

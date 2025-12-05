@@ -1,4 +1,4 @@
-name: AWSnippets Actions
+name: AWSnippets Actions STAGING
 run-name: AWSnippets STAGING event ${{ github.event_name }} raised by ${{ github.actor }} on ${{ github.ref_name }}
 on: 
   push:

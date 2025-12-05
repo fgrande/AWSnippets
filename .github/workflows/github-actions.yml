@@ -30,7 +30,7 @@ jobs:
         name: Upload Snippets
         with:
           connection_string: ${{ secrets.AZURE_AWSOFTWARE_STORAGE }}
-          container_name: packages
+          container_name: packagesdev/awsnippets
           source_folder: ${{ github.workspace }}/tmpsnippets
           destination_folder: /             
       - run: echo "This job's status is ${{ job.status }}."

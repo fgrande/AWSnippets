@@ -26,6 +26,12 @@ jobs:
           fi
       - name: Copy CHANGELOG to tmpsnippets
         run: cp CHANGELOG.md ${{ github.workspace }}/tmpsnippets/AWSnippets_CHANGELOG.md
+      - name: Copy Package with Version
+        run: |
+          version=$(cat VERSION)
+          cp "${{ github.workspace }}/tmpsnippets/AWSnippets.zip" "${{ github.workspace }}/tmpsnippets/AWSnippets_${version}.zip"
+      - name: Check the generated files in /tmpsnippets
+        run: ls -la "${{ github.workspace }}/tmpsnippets"
       - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
         name: Upload Snippets
         with:

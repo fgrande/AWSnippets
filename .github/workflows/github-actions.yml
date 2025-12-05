@@ -25,11 +25,7 @@ jobs:
             exit 1 
           fi
       - name: Copy CHANGELOG to tmpsnippets
-        run: cp CHANGELOG.md ${{ github.workspace }}/tmpsnippets/AWSnippets_CHANGELOG.md
-      - name: Copy Package with Version
-        run: |
-          version=$(cat VERSION)
-          cp "${{ github.workspace }}/tmpsnippets/AWSnippets.zip" "${{ github.workspace }}/tmpsnippets/AWSnippets_${version}.zip"
+        run: cp CHANGELOG.md "${{ github.workspace }}/tmpsnippets/AWSnippets_CHANGELOG.md"
       - name: Check the generated files in /tmpsnippets
         run: ls -la "${{ github.workspace }}/tmpsnippets"
       - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
@@ -39,5 +35,17 @@ jobs:
           container_name: packagesdev
           source_folder: ${{ github.workspace }}/tmpsnippets
           destination_folder: awsnippets
+      - name: Copy Package with Version
+        run: |
+          version=$(cat VERSION)
+          mv "${{ github.workspace }}/tmpsnippets/AWSnippets.zip" "${{ github.workspace }}/tmpsnippets/AWSnippets_${version}.zip"
+          rm "${{ github.workspace }}/tmpsnippets/AWSnippets_CHANGELOG.md"
+      - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
+        name: Upload Snippets
+        with:
+          connection_string: ${{ secrets.AZURE_AWSOFTWARE_STORAGE }}
+          container_name: packagesdev
+          source_folder: ${{ github.workspace }}/tmpsnippets
+          destination_folder: awsnippets_versions
       - run: echo "This job's status is ${{ job.status }}."
           

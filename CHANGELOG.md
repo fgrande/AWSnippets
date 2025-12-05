@@ -7,6 +7,8 @@ All notable changes to AWSnippets project will be documented in this file.
 Added snippets for Secrets variables
  
 ### Added
+
+Session variables - Get methods
  
 ### Changed
    

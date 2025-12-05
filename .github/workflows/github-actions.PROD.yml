@@ -1,0 +1,53 @@
+name: AWSnippets Actions
+run-name: AWSnippets PRODUCTION event ${{ github.event_name }} raised by ${{ github.actor }} on ${{ github.ref_name }}
+on: 
+  push:
+    branches: 
+      - production
+jobs:
+  AWSnippets-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set RepoName variable
+        run: |
+          echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_ENV
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Create Destination Dir
+        run: mkdir ${{ github.workspace }}/tmpsnippets
+      - uses: fgrande/Action-OSUtils@master
+        name: Build Snippets
+        with:
+          osAction: BuildSnippets
+          snippetZipFile: tmpsnippets/AWSnippets.zip
+          version: VERSION
+          build: BUILD
+      - name: verify if Zip file exists
+        run: |
+          if [ ! -f "${{ github.workspace }}/tmpsnippets/AWSnippets.zip" ]; then
+            exit 1 
+          fi
+      - name: Copy CHANGELOG to tmpsnippets
+        run: cp CHANGELOG.md "${{ github.workspace }}/tmpsnippets/AWSnippets_CHANGELOG.md"
+      - name: Check the generated files in /tmpsnippets
+        run: ls -la "${{ github.workspace }}/tmpsnippets"
+      - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
+        name: Upload Snippets
+        with:
+          connection_string: ${{ secrets.AZURE_AWSOFTWARE_STORAGE }}
+          container_name: packagesprod
+          source_folder: ${{ github.workspace }}/tmpsnippets
+          destination_folder: awsnippets
+      - name: Copy Package with Version
+        run: |
+          version=$(cat VERSION)
+          mv "${{ github.workspace }}/tmpsnippets/AWSnippets.zip" "${{ github.workspace }}/tmpsnippets/AWSnippets_${version}.zip"
+          rm "${{ github.workspace }}/tmpsnippets/AWSnippets_CHANGELOG.md"
+      - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
+        name: Upload Snippets
+        with:
+          connection_string: ${{ secrets.AZURE_AWSOFTWARE_STORAGE }}
+          container_name: packagesprod
+          source_folder: ${{ github.workspace }}/tmpsnippets
+          destination_folder: awsnippets_versions
+      - run: echo "This job's status is ${{ job.status }}."

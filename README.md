@@ -1,11 +1,20 @@
 # AWSnippets
 A package to build OneStream's snippets
 
-Download it from https://awsoftware.blob.core.windows.net/packagesdev/awsnippets/AWSnippets.zip
 
-ChangeLog is here: https://awsoftware.blob.core.windows.net/packagesdev/awsnippets/AWSnippets_CHANGELOG.md
+## Download and Install
+Package is downloadable in different Flavors: 
+
+| Flavor | Installer | ChangeLog | |
+| --- | --- | --- | --- |
+| Development | [AWSnippets.zip](https://awsoftware.blob.core.windows.net/packagesdev/awsnippets/AWSnippets.zip) | [CHANGELOG.md](https://awsoftware.blob.core.windows.net/packagesdev/awsnippets/AWSnippets_CHANGELOG.md) | |
+| Staging | [AWSnippets.zip](https://awsoftware.blob.core.windows.net/packagesstaging/awsnippets/AWSnippets.zip) | [CHANGELOG.md](https://awsoftware.blob.core.windows.net/packagesstaging/awsnippets/AWSnippets_CHANGELOG.md) | |
+| Production | [AWSnippets.zip](https://awsoftware.blob.core.windows.net/packagesprod/awsnippets/AWSnippets.zip) | [CHANGELOG.md](https://awsoftware.blob.core.windows.net/packagesprod/awsnippets/AWSnippets_CHANGELOG.md) | Last Stable Release |
+
 
 To install snippets just grab the above mentioned zip file and load it into OneStream through the **Application Load/Extract** procedure.
+
+
 
 
 ## Directory Structure

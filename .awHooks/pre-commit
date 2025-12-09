@@ -4,6 +4,9 @@
 buildNo=$(git rev-list --count main)
 echo $buildNo > BUILD
 
+sed -i 's/{{build}}/'"${buildNo}"'/' CHANGELOG.md
+
 git add BUILD
+git add CHANGELOG
 
 exit 0

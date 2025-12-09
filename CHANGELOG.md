@@ -14,6 +14,9 @@ First release
 - First snippets
  
 ### Changed
+
+- Build {{build}} - Build in CHANGELOG
    
 ### Fixed
  
+- Build {{build}} - Fix generic

@@ -41,7 +41,7 @@ jobs:
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          ref: ${{ steps.version.outputs.version }}          
+          ref: ${{ steps.version.outputs.version }}
       - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
         name: Upload Snippets
         with:

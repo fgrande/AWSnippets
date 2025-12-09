@@ -31,6 +31,17 @@ jobs:
         run: cp CHANGELOG.md "${{ github.workspace }}/tmpsnippets/AWSnippets_CHANGELOG.md"
       - name: Check the generated files in /tmpsnippets
         run: ls -la "${{ github.workspace }}/tmpsnippets"
+      - name: Set version Output
+        id: version
+        run: |
+          version=$(cat VERSION)
+          echo "version=${version}" >> $GITHUB_OUTPUT
+      - name: Set Version Tag
+        uses: EndBug/latest-tag@latest
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          ref: ${{ steps.version.outputs.version }}
       - uses: LanceMcCarthy/Action-AzureBlobUpload@v2
         name: Upload Snippets
         with:

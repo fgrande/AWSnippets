@@ -15,8 +15,4 @@ First release
  
 ### Changed
 
-- Build 51 - Build in CHANGELOG
-   
 ### Fixed
- 
-- Build 51 - Fix generic

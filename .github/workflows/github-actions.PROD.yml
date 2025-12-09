@@ -36,6 +36,8 @@ jobs:
         run: |
           version=$(cat VERSION)
           echo "version=${version}" >> $GITHUB_OUTPUT
+      - name: Verify saved version number
+        run: echo "Version is " ${{ steps.version.outputs.version }}
       - name: Set Version Tag
         uses: EndBug/latest-tag@latest
         env: 

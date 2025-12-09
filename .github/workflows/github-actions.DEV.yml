@@ -35,7 +35,7 @@ jobs:
         id: version
         run: |
           version=$(cat VERSION)
-          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "version=${version}-dev" >> $GITHUB_OUTPUT
       - name: Set Version Tag
         uses: EndBug/latest-tag@latest
         env: 

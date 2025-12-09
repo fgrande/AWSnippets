@@ -7,6 +7,6 @@ echo $buildNo > BUILD
 sed -i 's/{{build}}/'"${buildNo}"'/' CHANGELOG.md
 
 git add BUILD
-git add CHANGELOG
+git add CHANGELOG.md
 
 exit 0

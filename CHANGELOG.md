@@ -15,8 +15,8 @@ First release
  
 ### Changed
 
-- Build {{build}} - Build in CHANGELOG
+- Build 51 - Build in CHANGELOG
    
 ### Fixed
  
-- Build {{build}} - Fix generic
+- Build 51 - Fix generic

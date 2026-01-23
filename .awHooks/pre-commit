@@ -1,12 +1,11 @@
 #!/bin/sh
 
-# Just for test
 buildNo=$(git rev-list --count main)
-echo $buildNo > BUILD
+echo "Set Build # "$buildNo
 
 sed -i 's/{{build}}/'"${buildNo}"'/' CHANGELOG.md
+sed -i 's/{{now}}/'"$(date '+%Y-%m-%d')"'/' CHANGELOG.md
 
-git add BUILD
 git add CHANGELOG.md
 
 exit 0

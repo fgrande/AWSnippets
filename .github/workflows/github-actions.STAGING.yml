@@ -13,6 +13,10 @@ jobs:
           echo "REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_ENV
       - name: Check out repository code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create BUILD file
+        run: git rev-list --count main > BUILD          
       - name: Create Destination Dir
         run: mkdir ${{ github.workspace }}/tmpsnippets
       - uses: fgrande/Action-OSUtils@master
